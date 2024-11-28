@@ -1,101 +1,115 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import React from 'react';
+
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+    <div className="min-h-screen bg-yellow-50">
+      {/* Navigation */}
+      <nav className="bg-yellow-200 p-4 shadow-md">
+        <div className="container mx-auto flex justify-between items-center">
+          <a href="/" className="text-2xl font-bold text-yellow-800 hover:text-yellow-600 transition">
+            My Learning Platform
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="space-x-4">
+            <a 
+              href="/courses" 
+              className="text-yellow-800 hover:bg-yellow-300 px-3 py-2 rounded-md transition"
+            >
+              Courses
+            </a>
+            <a 
+              href="/login" 
+              className="text-yellow-800 hover:bg-yellow-300 px-3 py-2 rounded-md transition"
+            >
+              Log In
+            </a>
+            <a 
+              href="/register" 
+              className="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 transition"
+            >
+              Sign Up
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </nav>
+
+{/* Main Content */}
+<main className="container mx-auto px-4 py-12 mt-32"> {/* Añadí mt-24 para empujar el contenido hacia abajo */}
+  <div className="text-center">
+    <h1 className="text-5xl font-extrabold text-yellow-900 mb-6">
+      Welcome to Your Learning Platform
+    </h1>
+    <p className="text-xl text-yellow-800 mb-8">
+      Discover, Learn, and Grow with Our Innovative Courses
+    </p>
+
+    {/* Grid of Boxes */}
+    <div className="grid md:grid-cols-3 gap-8 mt-12">
+      {/* Box 1 */}
+      <div className="bg-yellow-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+        <h2 className="text-3xl font-bold text-yellow-900 mb-4">Diverse Courses</h2>
+        <p className="text-lg text-yellow-800 mb-6">
+          Explore a wide range of courses designed to boost your career. Whether you're
+          looking to advance your skills or explore new interests, our courses offer something
+          for everyone. From programming to creative writing, discover a world of learning 
+          opportunities at your fingertips.
+        </p>
+        <p className="text-yellow-800">
+          Our courses cover a variety of topics, with flexible schedules and expert instructors
+          guiding you every step of the way.
+        </p>
+      </div>
+
+      {/* Box 2 */}
+      <div className="bg-yellow-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+        <h2 className="text-3xl font-bold text-yellow-900 mb-4">Learn at Your Pace</h2>
+        <p className="text-lg text-yellow-800 mb-6">
+          Flexible content that adapts to your lifestyle and schedule. Study whenever and
+          wherever you are, and take control of your learning journey. Whether you're a busy
+          professional or a full-time student, our platform makes learning easy.
+        </p>
+        <p className="text-yellow-800">
+          With on-demand lessons and no deadlines, you can learn at your own pace and never
+          feel rushed. Progress when it works best for you!
+        </p>
+      </div>
+
+      {/* Box 3 */}
+      <div className="bg-yellow-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+        <h2 className="text-3xl font-bold text-yellow-900 mb-4">Certifications</h2>
+        <p className="text-lg text-yellow-800 mb-6">
+          Obtain recognized certificates to enhance your professional profile. Stand out in your
+          career with certificates from top institutions. Our certifications are recognized by
+          leading companies and educational organizations.
+        </p>
+        <p className="text-yellow-800">
+          Whether you're looking to make a career change or advance in your current role, our
+          certifications can help you open new doors and enhance your skill set.
+        </p>
+      </div>
+    </div>
+
+    {/* Button */}
+    <div className="mt-3 sm:mt-13 md:mt-22 lg:mt-28">
+      <a 
+        href="/courses" 
+        className="bg-yellow-600 text-white text-2xl px-9 py-5 rounded-lg hover:bg-yellow-700 transition inline-block w-full sm:w-auto hidden md:block"
+      >
+        Explore Courses
+      </a>
+    </div>
+  </div>
+</main>
+
+
+
+      {/* Footer */}
+      <footer className="bg-yellow-200 py-6 mt-10 fixed bottom-0 w-full">
+  <div className="container mx-auto text-center text-yellow-800">
+    © 2024 My Learning Platform. All rights reserved.
+  </div>
+</footer>
     </div>
   );
 }
