@@ -18,42 +18,52 @@ export default function RegisterPage() {
       });
 
       if (!response.ok) {
-        throw new Error("Error al registrar");
+        throw new Error("Error registering user");
       }
 
-      console.log("Usuario registrado");
+      console.log("User registered successfully");
     } catch (error) {
-      console.error("Error en el registro:", error);
+      console.error("Registration error:", error);
     }
   };
 
   return (
-    <div>
-      <h1>Registrar usuario</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Correo electrónico"
-          required
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Contraseña"
-          required
-        />
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Nombre"
-          required
-        />
-        <button type="submit">Registrar</button>
-      </form>
+    <div className="min-h-screen bg-yellow-50 flex justify-center items-center">
+      <div className="bg-yellow-200 p-8 rounded-lg shadow-xl max-w-sm w-full">
+        <h1 className="text-4xl font-extrabold text-yellow-800 text-center mb-6">Sign Up</h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email address"
+            required
+            className="w-full p-3 border border-yellow-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-black"
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            required
+            className="w-full p-3 border border-yellow-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-black"
+          />
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Full name"
+            required
+            className="w-full p-3 border border-yellow-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-black"
+          />
+          <button
+            type="submit"
+            className="w-full py-3 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+          >
+            Sign Up
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

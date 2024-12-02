@@ -28,7 +28,8 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": []  // Explicitamente elimina tipos innecesarios como 'prop-types'
   },
   "include": [
     "next-env.d.ts",
@@ -37,6 +38,7 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/node_modules/prop-types/**/*" // Excluye explícitamente prop-types si persiste el problema
   ]
 }
