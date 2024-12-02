@@ -45,7 +45,11 @@ const CoursesPage = () => {
       {/* Navigation */}
       <nav className="bg-yellow-200 p-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold text-yellow-800 hover:text-yellow-600 transition">
+        <a 
+            href="/" 
+            className="text-xl font-bold text-yellow-800 hover:text-yellow-600 transition md:text-2xl"
+            style={{ fontFamily: 'Courier New, Courier, monospace' }}
+          >
             My Learning Platform
           </a>
           <div className="space-x-4">
@@ -80,15 +84,15 @@ const CoursesPage = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12 mt-32">
         <div className="text-center mb-10">
-          <h1 className="text-5xl font-extrabold text-yellow-900 mb-6">Explore Our Courses</h1>
-          <p className="text-xl text-yellow-800 mb-8">Choose a course and start your learning journey today!</p>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-yellow-900 mb-6">Explore Our New Courses</h1>
+          <p className="text-lg sm:text-xl text-yellow-800 mb-8">Choose a course and start your learning journey today!</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Course 1: Spanish */}
           <div className="bg-yellow-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
-          <img src="https://images.pexels.com/photos/8430374/pexels-photo-8430374.jpeg" alt="Spanish Course" className="w-full h-48 object-cover rounded-t-xl" />
-          <h3 className="text-3xl font-bold text-yellow-900 my-4">Spanish Classes</h3>
+            <img src="https://images.pexels.com/photos/8430374/pexels-photo-8430374.jpeg" alt="Spanish Course" className="w-full h-48 object-cover rounded-t-xl" />
+            <h3 className="text-2xl sm:text-3xl font-bold text-yellow-900 my-4">Spanish Classes</h3>
             <p className="text-lg text-yellow-800 mb-4">Learn Spanish with expert instructors. Perfect for beginners or those looking to improve their skills.</p>
             <p className="text-yellow-800 mb-4">Start date: January 10, 2025 - End date: March 10, 2025</p>
             <button onClick={() => handleEnroll(1)} className="bg-yellow-600 text-white px-6 py-3 rounded-md hover:bg-yellow-700 transition">
@@ -99,7 +103,7 @@ const CoursesPage = () => {
           {/* Course 2: French */}
           <div className="bg-yellow-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
             <img src="https://images.pexels.com/photos/5781917/pexels-photo-5781917.jpeg" alt="French Course" className="w-full h-48 object-cover rounded-t-xl" />
-            <h3 className="text-3xl font-bold text-yellow-900 my-4">French Classes</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-yellow-900 my-4">French Classes</h3>
             <p className="text-lg text-yellow-800 mb-4">Master the French language with a structured course. Perfect for traveling or business needs.</p>
             <p className="text-yellow-800 mb-4">Start date: February 5, 2025 - End date: April 5, 2025</p>
             <button onClick={() => handleEnroll(2)} className="bg-yellow-600 text-white px-6 py-3 rounded-md hover:bg-yellow-700 transition">
@@ -110,7 +114,7 @@ const CoursesPage = () => {
           {/* Course 3: Python Programming */}
           <div className="bg-yellow-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
             <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="Python Programming" className="w-full h-48 object-cover rounded-t-xl" />
-            <h3 className="text-3xl font-bold text-yellow-900 my-4">Learn Python</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-yellow-900 my-4">Learn Python</h3>
             <p className="text-lg text-yellow-800 mb-4">Get hands-on experience in Python programming. Great for beginners and those looking to expand their programming knowledge.</p>
             <p className="text-yellow-800 mb-4">Start date: March 1, 2025 - End date: May 1, 2025</p>
             <button onClick={() => handleEnroll(3)} className="bg-yellow-600 text-white px-6 py-3 rounded-md hover:bg-yellow-700 transition">
@@ -121,7 +125,7 @@ const CoursesPage = () => {
           {/* Course 4: Cooking Classes */}
           <div className="bg-yellow-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
             <img src="https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg" alt="Cooking Class" className="w-full h-48 object-cover rounded-t-xl" />
-            <h3 className="text-3xl font-bold text-yellow-900 my-4">Cooking Classes</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-yellow-900 my-4">Cooking Classes</h3>
             <p className="text-lg text-yellow-800 mb-4">Learn how to cook amazing dishes with expert chefs. Perfect for beginners and food enthusiasts.</p>
             <p className="text-yellow-800 mb-4">Start date: April 10, 2025 - End date: June 10, 2025</p>
             <button onClick={() => handleEnroll(4)} className="bg-yellow-600 text-white px-6 py-3 rounded-md hover:bg-yellow-700 transition">
@@ -130,15 +134,6 @@ const CoursesPage = () => {
           </div>
         </div>
 
-        {/* Button */}
-        <div className="mt-8 text-center">
-          <a 
-            href="/courses" 
-            className="bg-yellow-600 text-white text-2xl px-9 py-5 rounded-lg hover:bg-yellow-700 transition inline-block"
-          >
-            Explore More Courses
-          </a>
-        </div>
       </main>
 
       {/* Footer */}

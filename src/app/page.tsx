@@ -8,7 +8,11 @@ export default function HomePage() {
       {/* Navigation */}
       <nav className="bg-yellow-200 p-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold text-yellow-800 hover:text-yellow-600 transition">
+        <a 
+            href="/" 
+            className="text-xl font-bold text-yellow-800 hover:text-yellow-600 transition md:text-2xl"
+            style={{ fontFamily: 'Courier New, Courier, monospace' }}
+          >
             My Learning Platform
           </a>
           <div className="space-x-4">
