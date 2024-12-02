@@ -87,8 +87,8 @@ const CoursesPage = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Course 1: Spanish */}
           <div className="bg-yellow-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
-            <img src="https://images.pexels.com/photos/54097/pexels-photo-54097.jpeg" alt="Spanish Course" className="w-full h-48 object-cover rounded-t-xl" />
-            <h3 className="text-3xl font-bold text-yellow-900 my-4">Spanish Classes</h3>
+          <img src="https://images.pexels.com/photos/8430374/pexels-photo-8430374.jpeg" alt="Spanish Course" className="w-full h-48 object-cover rounded-t-xl" />
+          <h3 className="text-3xl font-bold text-yellow-900 my-4">Spanish Classes</h3>
             <p className="text-lg text-yellow-800 mb-4">Learn Spanish with expert instructors. Perfect for beginners or those looking to improve their skills.</p>
             <p className="text-yellow-800 mb-4">Start date: January 10, 2025 - End date: March 10, 2025</p>
             <button onClick={() => handleEnroll(1)} className="bg-yellow-600 text-white px-6 py-3 rounded-md hover:bg-yellow-700 transition">
