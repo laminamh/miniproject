@@ -1,10 +1,12 @@
 "use client";
 
-import React from 'react';
+import React from "react";
+import { useRouter } from "next/navigation"; // Importar el hook useRouter
 
 export default function LoginPage() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const router = useRouter(); // Inicializar useRouter
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,8 +23,12 @@ export default function LoginPage() {
       }
 
       console.log("Logged in successfully");
+
+      // Redirigir a la página de cursos después del inicio de sesión exitoso
+      router.push("/courses");
     } catch (error) {
       console.error("Login error:", error);
+      alert("Invalid email or password. Please try again."); // Mostrar mensaje de error al usuario
     }
   };
 
